@@ -389,6 +389,8 @@ class ExtraFieldFixtures extends Fixture implements FixtureGroupInterface
                 'display_text' => 'Zgodność z RODO',
                 'item_type' => ExtraField::USER_FIELD_TYPE,
                 'value_type' => ExtraField::FIELD_TYPE_CHECKBOX,
+                'visible_to_self' => true,
+                'changeable' => true,
             ],
             [
                 'variable' => 'isFromNewLogin',

@@ -33,10 +33,10 @@
 
   <Dialog header="Create Thread" v-model:visible="showCreateThreadDialog" modal closable>
     <form @submit.prevent="handleSubmit">
-      <BaseInputText id="title" label="Title" v-model="title" :isInvalid="titleError" />
+      <BaseInputText id="title" :label="t('Title')" v-model="title" :isInvalid="titleError" />
       <BaseTinyEditor v-model="message" editor-id="messageEditor" title="Message" />
-      <BaseFileUploadMultiple v-model="files" label="Add files" accept="image/png, image/jpeg" />
-      <BaseButton type="button" label="Send message" icon="save" @click="handleSubmit" class="mt-8" />
+      <BaseFileUploadMultiple v-model="files" :label="t('Add Files')" accept="image/png, image/jpeg" />
+      <BaseButton type="button" :label="t('Send message')" icon="save" @click="handleSubmit" class="mt-8" />
     </form>
   </Dialog>
 </template>

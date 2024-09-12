@@ -6,7 +6,7 @@
         <BaseButton
           v-if="isAdmin"
           icon="edit"
-          label="Edit"
+          label="Edytuj"
           type="black"
           size="small"
           @click="handleClick(page)"

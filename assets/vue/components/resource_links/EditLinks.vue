@@ -16,7 +16,7 @@
       :options="users"
       :placeholder="$t('Share with User')"
       :searchable="true"
-      label="username"
+      :label="$t('username')"
       track-by="id"
       @select="addUser"
       @search-change="asyncFind"

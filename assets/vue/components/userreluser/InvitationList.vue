@@ -18,7 +18,7 @@
           <div class="flex space-x-2">
             <BaseButton
               v-if="invitation.canAccept"
-              label="Accept"
+              :label="t('Accept')"
               icon="check"
               type="success"
               @click="emitEvent('accept', invitation.itemId)"
@@ -26,7 +26,7 @@
             />
             <BaseButton
               v-if="invitation.canDeny"
-              label="Deny"
+              :label="t('Deny')"
               icon="times"
               type="danger"
               @click="emitEvent('deny', invitation.itemId)"

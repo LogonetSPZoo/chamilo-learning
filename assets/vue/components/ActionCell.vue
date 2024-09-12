@@ -8,7 +8,7 @@
           dense
           color="secondary"
           @click="handleShow"
-          label="Show"
+          label="Pokaż"
       />
       <q-btn
           v-if="handleEdit"
@@ -16,12 +16,12 @@
              dense
              color="secondary"
              @click="handleEdit"
-          label="Edit"
+          label="Edytuj"
       />
       <q-btn
           v-if="handleDelete"
           no-caps
-          label="Delete"
+          label="Usuń"
           dense
           color="red"
           @click="confirmDeleteClick = true"

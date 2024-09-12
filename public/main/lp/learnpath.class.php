@@ -7769,7 +7769,7 @@ class learnpath
         $form->addButtonSave($buttonText);
         $form->addHtml(
             Display::return_message(
-                'Variables :</br></br> <b>((certificate))</b> </br> <b>((skill))</b>',
+                'Parametry:</br></br> <b>((certificate))</b> </br> <b>((skill))</b>',
                 'normal',
                 false
             )

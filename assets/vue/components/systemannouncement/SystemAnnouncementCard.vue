@@ -7,7 +7,7 @@
         <BaseButton
           v-if="securityStore.isAdmin"
           icon="edit"
-          label="Edit"
+          :label="$t('Edit')"
           type="black"
           @click="handleAnnouncementClick(announcement)"
         />

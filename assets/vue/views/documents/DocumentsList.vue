@@ -112,7 +112,7 @@
     :total-records="totalItems"
     :value="items"
     class="mb-5"
-    current-page-report-template="Showing {first} to {last} of {totalRecords}"
+    current-page-report-template="Wyświetlanie {first} do {last} z {totalRecords}"
     data-key="iid"
     filter-display="menu"
     paginator-template="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"

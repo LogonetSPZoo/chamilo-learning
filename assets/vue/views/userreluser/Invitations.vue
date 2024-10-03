@@ -1,6 +1,6 @@
 <template>
   <BaseButton
-    label="Try and find some friends"
+    :label="$t('Try and find some friends')"
     icon="search"
     type="success"
     size="normal"
@@ -9,17 +9,17 @@
   <div>
     <InvitationList
       :invitations="receivedInvitations"
-      title="Invitations Received"
+      :title="$t('Invitations Received')"
       @accept="acceptInvitation"
       @deny="denyInvitation"
     />
     <InvitationList
       :invitations="sentInvitations"
-      title="Invitations Sent"
+      :title="$t('Invitations Sent')"
     />
     <InvitationList
       :invitations="pendingInvitations"
-      title="Pending Group Invitations"
+      :title="$t('Pending Group Invitations')"
       @accept="acceptGroupInvitation"
       @deny="denyGroupInvitation"
     />

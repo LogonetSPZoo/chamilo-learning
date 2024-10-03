@@ -10,7 +10,7 @@
     :rows-per-page-options="[5, 10, 20, 50]"
     :total-records="totalItems"
     :value="items"
-    current-page-report-template="Wyświetlanie {first} do {last} z {totalRecords}"
+    current-page-report-template="Showing {first} to {last} of {totalRecords}"
     data-key="@id"
     filter-display="menu"
     paginator-template="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
@@ -123,13 +123,13 @@
       <Button
         class="p-button-text"
         icon="pi pi-times"
-        :label="t('Cancel')"
+        label="Cancel"
         @click="hideDialog"
       />
       <Button
         class="p-button-text"
         icon="pi pi-check"
-        :label="t('Save')"
+        label="Save"
         @click="saveItem"
       />
     </template>
@@ -147,7 +147,7 @@
         style="font-size: 2rem"
       />
       <span v-if="item"
-        >Czy na pewno chcesz usunąć <b>{{ item.title }}</b
+        >Are you sure you want to delete <b>{{ item.title }}</b
         >?</span
       >
     </div>
@@ -187,13 +187,13 @@
       <Button
         class="p-button-text"
         icon="pi pi-times"
-        :label="t('No')"
+        label="No"
         @click="deleteMultipleDialog = false"
       />
       <Button
         class="p-button-text"
         icon="pi pi-check"
-        :label="t('Yes')"
+        label="Yes"
         @click="deleteMultipleItems"
       />
     </template>

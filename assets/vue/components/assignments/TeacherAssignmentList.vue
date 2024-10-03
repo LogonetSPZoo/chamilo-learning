@@ -7,7 +7,7 @@
     :rows-per-page-options="[10, 20, 50]"
     :total-records="totalRecords"
     :value="assignments"
-    current-page-report-template="Wyświetlanie {first} do {last} z {totalRecords}"
+    current-page-report-template="Showing {first} to {last} of {totalRecords}"
     data-key="@id"
     lazy
     paginator

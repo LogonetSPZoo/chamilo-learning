@@ -1,11 +1,11 @@
 <template>
   <div class="p-4 social-groups">
     <div class="flex justify-between items-center mb-4">
-      <h1 class="text-2xl font-semibold">{{t('Social Groups')}}</h1>
+      <h1 class="text-2xl font-semibold">Social Groups</h1>
       <Button
         class="bg-blue-500 text-white rounded-md px-4 py-2"
         icon="pi pi-plus"
-        :label="t('Create a social group')"
+        label="Create a social group"
         @click="showCreateGroupDialog = true"
       />
     </div>
@@ -14,25 +14,25 @@
         :class="['tab', { 'tab-active': activeTab === 'Newest' }]"
         @click="activeTab = 'Newest'"
       >
-        {{ $t('Newest') }}
+        Newest
       </button>
       <button
         :class="['tab', { 'tab-active': activeTab === 'Popular' }]"
         @click="activeTab = 'Popular'"
       >
-        {{ $t('Popular') }}
+        Popular
       </button>
       <button
         :class="['tab', { 'tab-active': activeTab === 'My groups' }]"
         @click="activeTab = 'My groups'"
       >
-        {{ $t('My groups') }}
+        My Groups
       </button>
       <button
         :class="['tab', { 'tab-active': activeTab === 'Search Groups' }]"
         @click="activeTab = 'Search Groups'"
       >
-        {{ $t('Search Groups') }}
+        Search Groups
       </button>
     </div>
     <div v-show="activeTab === 'Newest'">
@@ -45,7 +45,7 @@
           <img
             v-if="group.pictureUrl"
             :src="group.pictureUrl"
-            :alt="t('Group Image')"
+            alt="Group Image"
             class="w-16 h-16 rounded-full mr-4"
           />
           <i
@@ -59,7 +59,7 @@
             >{{ group.title }}</a
             >
             <div class="group-info text-gray-500">
-              <span class="group-member-count">{{ group.memberCount }} Członków</span>
+              <span class="group-member-count">{{ group.memberCount }} Members</span>
               <span class="group-description">{{ group.description }}</span>
             </div>
           </div>
@@ -76,7 +76,7 @@
           <img
             v-if="group.pictureUrl"
             :src="group.pictureUrl"
-            :alt="t('Group Image')"
+            alt="Group Image"
             class="w-16 h-16 rounded-full mr-4"
           />
           <i
@@ -107,7 +107,7 @@
           <img
             v-if="group.pictureUrl"
             :src="group.pictureUrl"
-            :alt="t('Group Image')"
+            alt="Group Image"
             class="w-16 h-16 rounded-full mr-4"
           />
           <i
@@ -136,7 +136,7 @@
   <Dialog
     v-model:visible="showCreateGroupDialog"
     closable="true"
-    :header="t('Add')"
+    header="Add"
     modal="true"
   >
     <form @submit.prevent="createGroup">
@@ -144,14 +144,14 @@
         <BaseInputTextWithVuelidate
           v-model="groupForm.name"
           :vuelidate-property="v$.groupForm.name"
-          :label="t('Name*')"
+          label="Name*"
         />
 
         <BaseInputTextWithVuelidate
           v-model="groupForm.description"
           :vuelidate-property="v$.groupForm.description"
           as="textarea"
-          :label="t('Description')"
+          label="Description"
           rows="3"
         />
 
@@ -167,13 +167,13 @@
           @file-selected="selectedFile = $event"
         />
         <div class="p-field mt-2">
-          <label for="groupPermissions">{{ t("Group Permissions") }}</label>
+          <label for="groupPermissions">Group Permissions</label>
           <Dropdown
             id="groupPermissions"
             v-model="groupForm.permissions"
             :options="permissionsOptions"
             option-label="label"
-            :placeholder="t('Select Permission')"
+            placeholder="Select Permission"
           />
         </div>
         <div class="p-field-checkbox mt-2">
@@ -188,12 +188,12 @@
       <Button
         class="p-button-rounded p-button-text"
         icon="pi pi-check"
-        :label="t('Add')"
+        label="Add"
         @click="createGroup"
       />
       <Button
         class="p-button-text"
-        :label="t('Close')"
+        label="Close"
         @click="showCreateGroupDialog = false"
       />
     </form>
@@ -239,8 +239,8 @@ const v$ = useVuelidate(
   { groupForm }
 );
 const permissionsOptions = [
-  { label: "Otwarta", value: "1" },
-  { label: "Zamknięta", value: "2" },
+  { label: "Open", value: "1" },
+  { label: "Closed", value: "2" },
 ];
 const createGroup = async () => {
   v$.value.$touch();

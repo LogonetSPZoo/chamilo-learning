@@ -7,8 +7,8 @@
         </q-card-section>
 
         <v-card-actions>
-          <q-btn flat label="{{ $t('Cancel') }}" color="primary" v-close-popup @click="handleCancel" />
-          <q-btn flat label="{{ $t('Delete') }}" color="primary" v-close-popup @click="handleDelete" />
+          <q-btn flat label="Cancel" color="primary" v-close-popup @click="handleCancel" />
+          <q-btn flat label="Delete" color="primary" v-close-popup @click="handleDelete" />
         </v-card-actions>
       </v-card>
     </q-dialog>

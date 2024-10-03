@@ -268,7 +268,7 @@ courseService.loadCTools(course.value.id, session.value?.id).then((cTools) => {
       return false
     })
     .map((adminTool) => ({
-      label: t(adminTool.tool.titleToShow),
+      label: adminTool.tool.titleToShow,
       url: adminTool.url,
     }))
 

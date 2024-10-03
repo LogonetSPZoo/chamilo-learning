@@ -45,6 +45,7 @@ defineExpose({
 })
 
 async function listPosts() {
+  postList.splice(0, postList.length)
   if (!user.value["@id"]) {
     return
   }
@@ -61,18 +62,7 @@ async function listPosts() {
   }
 
   const { data } = await axios.get(ENTRYPOINT + "social_posts", { params })
-  if (filterType === "promoted") {
-    postList.splice(0, postList.length)
-  }
-
-  data["hydra:member"].forEach((newPost) => {
-    const exists = postList.some((post) => post["@id"] === newPost["@id"])
-    if (!exists) {
-      postList.push(newPost)
-    }
-  })
-
-  postList.sort((a, b) => new Date(b.sendDate) - new Date(a.sendDate))
+  postList.push(...data["hydra:member"])
 
   isLoading.value = false
 }

@@ -16,7 +16,7 @@
     :total-records="totalItems"
     :value="itemsShared"
     class="p-datatable-sm"
-    current-page-report-template="Wyświetlanie {first} do {last} z {totalRecords}"
+    current-page-report-template="Showing {first} to {last} of {totalRecords}"
     data-key="iid"
     filter-display="menu"
     paginator-template="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"

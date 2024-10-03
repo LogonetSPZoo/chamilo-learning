@@ -5,11 +5,11 @@
       <div class="p-inputgroup">
         <BaseInputText
           v-model="searchTerm"
-          :placeholder="t('Search term...')"
+          :placeholder="t('Search')"
           class="search-term-input"
-          :label="t('Search term ...')"/>
+          label="Search term ..."/>
         <BaseButton
-          :label="t('Search')"
+          label="Search"
           icon="pi pi-search"
           @click="performSearch"
           type="button"/>

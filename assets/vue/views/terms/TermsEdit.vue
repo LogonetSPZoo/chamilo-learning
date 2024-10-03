@@ -12,9 +12,9 @@
           :options="languages"
           v-model="selectedLanguage"
           optionLabel="name"
-          :placeholder="t('Select a language')"
+          placeholder="Select a language"
           inputId="language-dropdown"
-          :label="t('Language')"
+          label="Language"
           name="language"
         />
         <BaseButton :label="t('Load')" @click="loadTermsByLanguage" icon="search" type="button" class="ml-4"/>
@@ -60,9 +60,9 @@
         />
 
         <div class="form-actions">
-          <BaseButton :label="t('Back')" type="secondary" @click="backToList" icon="back" class="mr-4" />
-          <BaseButton :label="t('Preview')" type="primary" @click="previewTerms" icon="search"  class="mr-4" />
-          <BaseButton :label="t('Save')" type="success" isSubmit icon="save"  class="mr-4" />
+          <BaseButton label="Back" type="secondary" @click="backToList" icon="back" class="mr-4" />
+          <BaseButton label="Preview" type="primary" @click="previewTerms" icon="search"  class="mr-4" />
+          <BaseButton label="Save" type="success" isSubmit icon="save"  class="mr-4" />
         </div>
       </form>
     </div>

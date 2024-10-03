@@ -17,7 +17,7 @@
       <input
         v-model="searchQuery"
         class="search-input mr-3"
-        :placeholder="t('Search Users')"
+        :placeholder="t('Search')"
         type="text"
       />
       <BaseButton
@@ -51,19 +51,19 @@
               class="action-button invite-button"
               @click="addFriend(user)"
             >
-              {{ t('Send invitation') }}
+              Send invitation
             </button>
             <a
               :href="`/main/inc/ajax/user_manager.ajax.php?a=get_user_popup&user_id=${user.id}`"
               class="action-button message-button ajax"
               data-title="Send message"
-              :title="t('Send message')"
+              title="Send message"
             >
               <i
                 aria-hidden="true"
                 class="fa fa-envelope"
               ></i>
-              {{ t('Send message') }}
+              Send message
             </a>
           </div>
         </div>

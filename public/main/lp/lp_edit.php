@@ -113,7 +113,7 @@ if ('true' === api_get_setting('allow_course_theme')) {
 // Author
 $form->addHtmlEditor(
     'html_editor',
-    get_lang('Author'),
+    'lp_author',
     get_lang('Author'),
     ['size' => 80],
     ['ToolbarSet' => 'LearningPathAuthor', 'Width' => '100%', 'Height' => '200px']

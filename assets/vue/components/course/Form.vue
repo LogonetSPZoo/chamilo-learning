@@ -55,7 +55,7 @@
     <!-- Form Footer -->
     <div class="form-footer">
       <BaseButton
-        :label="t('Back')"
+        label="Back"
         icon="back"
         type="secondary"
         @click="goBack"

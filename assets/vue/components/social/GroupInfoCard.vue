@@ -22,21 +22,21 @@
     v-model:visible="showEditGroupDialog"
     :closable="true"
     :modal="true"
-    :header="$t('Edit Group')"
+    header="Edit Group"
   >
     <form @submit.prevent="submitGroupEdit">
       <div class="p-fluid">
         <BaseInputTextWithVuelidate
           v-model="editGroupForm.name"
           :vuelidate-property="v$.editGroupForm.name"
-          :label="$t('Name*')"
+          label="Name*"
         />
 
         <BaseInputTextWithVuelidate
           v-model="editGroupForm.description"
           :vuelidate-property="v$.editGroupForm.description"
           as="textarea"
-          :label="$t('Description')"
+          label="Description"
           rows="3"
         />
 
@@ -60,7 +60,7 @@
             v-model="editGroupForm.permissions"
             :options="permissionsOptions"
             option-label="label"
-            :placeholder="$t('Select Permission')"
+            placeholder="Select Permission"
           />
         </div>
 
@@ -76,12 +76,12 @@
       <Button
         class="p-button-rounded p-button-text"
         icon="pi pi-check"
-        :label="$t('Save')"
+        label="Save"
         @click="submitGroupEdit"
       />
       <Button
         class="p-button-text"
-        :label="$t('Close')"
+        label="Close"
         @click="closeEditDialog"
       />
     </form>
@@ -110,8 +110,8 @@ const showEditGroupDialog = ref(false)
 const selectedFile = ref(null)
 
 const permissionsOptions = [
-  { label: "Otwarte", value: 1 },
-  { label: "Zamknięte", value: 2 },
+  { label: "Open", value: 1 },
+  { label: "Closed", value: 2 },
 ]
 
 const editGroupForm = ref({

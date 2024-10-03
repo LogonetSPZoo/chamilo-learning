@@ -31,7 +31,7 @@
     :total-records="totalItems"
     :value="items"
     class="p-datatable-sm"
-    current-page-report-template="Showing {first} to {last} of {totalRecords}"
+    current-page-report-template="Wyświetlanie {first} do {last} z {totalRecords}"
     data-key="iid"
     filter-display="menu"
     paginator-template="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
@@ -89,7 +89,7 @@
         <div class="flex flex-row gap-2">
           <Button
             class="p-button-sm p-button p-mr-2"
-            label="Select"
+            :label="$t('Select')"
             @click="returnToEditor(slotProps.data)"
           />
         </div>

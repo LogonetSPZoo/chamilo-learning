@@ -81,7 +81,7 @@
       :rows-per-page-options="[10, 20, 50]"
       :total-records="totalItems"
       :value="items"
-      current-page-report-template="{first} to {last} of {totalRecords}"
+      current-page-report-template="{first} do {last} z {totalRecords}"
       data-key="@id"
       lazy
       paginator

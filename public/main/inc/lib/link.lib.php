@@ -988,7 +988,7 @@ class Link extends Model
                         $toolbar .= Display::toolbarButton(
                             get_lang('Move up'),
                             api_get_self().'?'.api_get_cidreq().'&'.http_build_query($moveLinkParams),
-                            'level-up-alt',
+                            'chevron-up',
                             'secondary',
                             ['class' => 'btn-sm '.(1 === $i ? 'disabled' : '')],
                             false
@@ -998,7 +998,7 @@ class Link extends Model
                         $toolbar .= Display::toolbarButton(
                             get_lang('Move down'),
                             api_get_self().'?'.api_get_cidreq().'&'.http_build_query($moveLinkParams),
-                            'level-down-alt',
+                            'chevron-down',
                             'secondary',
                             ['class' => 'btn-sm '.($i === $numberOfLinks ? 'disabled' : '')],
                             false

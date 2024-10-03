@@ -2206,7 +2206,7 @@ class Exercise
             $form->addElement(
                 'number',
                 'exerciseAttempts',
-                get_lang('max. 20 characters, e.g. <i>INNOV21</i> number of attempts'),
+                get_lang('Max number of attempts'),
                 null,
                 ['id' => 'exerciseAttempts']
             );

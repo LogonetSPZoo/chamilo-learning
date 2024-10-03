@@ -28,7 +28,7 @@
            label=""/>
         </div>
         <BaseButton
-          label="Search"
+          :label="t('Search')"
           icon="search"
           @click="handleFormSearch"
           type="secondary"

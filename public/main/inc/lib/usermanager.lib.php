@@ -484,9 +484,9 @@ class UserManager
                         $emailBody,
                         $sender_name,
                         $email_admin,
-                        null,
-                        null,
-                        null,
+                        [],
+                        [],
+                        false,
                         [],
                         $creatorEmail
                     );
@@ -517,9 +517,9 @@ class UserManager
                             $emailBody,
                             $sender_name,
                             $email_admin,
-                            null,
-                            null,
-                            null,
+                            [],
+                            [],
+                            false,
                             [],
                             $creatorEmail
                         );
@@ -1016,10 +1016,10 @@ class UserManager
                 $emailBody,
                 $sender_name,
                 $email_admin,
-                null,
-                null,
-                null,
-                null,
+                [],
+                [],
+                false,
+                [],
                 $creatorEmail
             );
         }

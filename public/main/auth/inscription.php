@@ -1217,12 +1217,12 @@ if ($form->validate()) {
         }
     } else {
         if (!empty($values['email'])) {
-            $linkDiagnostic = api_get_path(WEB_PATH).'main/search/search.php';
+            $linkDiagnostic = api_get_path(WEB_PATH).'courses';
             $textAfterRegistration .= '<p>'.get_lang('An e-mail has been sent to remind you of your login and password', $userEntity->getLocale()).'</p>';
             $diagnosticPath = '<a href="'.$linkDiagnostic.'" class="custom-link">'.$linkDiagnostic.'</a>';
             $textAfterRegistration .= '<p>';
             $textAfterRegistration .= sprintf(
-                            get_lang('Welcome, please go to diagnostic at %s.', $userEntity->getLocale()),
+                            get_lang('Welcome, please go to course list at %s.', $userEntity->getLocale()),
                             $diagnosticPath
             );
             $textAfterRegistration .= '</p>';

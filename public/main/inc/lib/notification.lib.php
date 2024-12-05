@@ -280,9 +280,10 @@ class Notification extends Model
                 if (!empty($settingInfo)) {
                     $extra_data = UserManager::get_extra_user_data($user_id);
 
-                    if (isset($extra_data[$settingToCheck])) {
-                        $userSetting = $extra_data[$settingToCheck];
-                    }
+                    // Powoduje błąd przy rejestracji.
+//                    if (isset($extra_data[$settingToCheck])) {
+//                        $userSetting = $defaultStatus;
+//                    }
 
                     // Means that user extra was not set
                     // Then send email now.

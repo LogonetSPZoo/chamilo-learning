@@ -28190,3 +28190,15 @@ msgstr "Lista kursów"
 
 msgid "PlatformAdmin"
 msgstr "Administracja"
+
+msgid "Welcome to this platform"
+msgstr "Witamy na tej platformie"
+
+msgid "For more details visit %s"
+msgstr "Aby uzyskać więcej informacji, odwiedź %s"
+
+msgid "Manager"
+msgstr "Administrator"
+
+msgid "Your Reg"
+msgstr "Nowe konto na"

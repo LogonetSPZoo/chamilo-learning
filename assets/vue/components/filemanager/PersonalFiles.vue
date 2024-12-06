@@ -3,11 +3,11 @@
     <div v-if="isAuthenticated" class="q-card">
       <div class="p-4 flex flex-row gap-1 mb-2">
         <div class="flex flex-row gap-2">
-          <Button class="btn btn--primary" icon="fa fa-folder-plus" label="New folder" @click="openNewDialog" />
-          <Button class="btn btn--primary" icon="fa fa-file-upload" label="Upload" @click="uploadDocumentHandler" />
-          <Button v-if="selectedFiles.length" class="btn btn--danger" icon="pi pi-trash" label="Delete" @click="confirmDeleteMultiple" />
+          <Button class="btn btn--primary" icon="fa fa-folder-plus" :label="$t('New folder')" @click="openNewDialog" />
+          <Button class="btn btn--primary" icon="fa fa-file-upload" :label="$t('Upload')" @click="uploadDocumentHandler" />
+          <Button v-if="selectedFiles.length" class="btn btn--danger" icon="pi pi-trash" :label="$t('Delete')" @click="confirmDeleteMultiple" />
           <Button class="btn btn--primary" :icon="viewModeIcon" @click="toggleViewMode" />
-          <Button v-if="previousFolders.length" class="btn btn--primary" icon="pi pi-arrow-left" label="Back" @click="goBack" />
+          <Button v-if="previousFolders.length" class="btn btn--primary" icon="pi pi-arrow-left" :label="$t('Back')" @click="goBack" />
         </div>
       </div>
       <div class="breadcrumbs">
@@ -31,7 +31,7 @@
         :total-records="totalFiles"
         :value="files"
         class="p-datatable-sm"
-        current-page-report-template="Showing {first} to {last} of {totalRecords}"
+        current-page-report-template="Wyświetlanie {first} do {last} z {totalRecords}"
         data-key="iid"
         filter-display="menu"
         paginator-template="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
@@ -80,7 +80,7 @@
               <Button
                 v-if="slotProps.data.resourceNode.firstResourceFile"
                 class="p-button-sm p-button p-mr-2"
-                label="Select"
+                :label="$t('Select')"
                 @click="returnToEditor(slotProps.data)"
               />
             </div>
@@ -105,18 +105,18 @@
       </div>
       <div v-if="totalPages > 1" class="flex justify-center mt-4 space-x-4">
         <button class="btn btn--plain px-4 py-2 rounded-md hover:bg-blue-600 disabled:bg-gray-300" :disabled="filters.page === 1" @click="previousPage">Previous</button>
-        <span class="text-gray-700 font-semibold">Page {{ filters.page }} of {{ totalPages }}</span>
+        <span class="text-gray-700 font-semibold">Strona {{ filters.page }} z {{ totalPages }}</span>
         <button class="btn btn--plain px-4 py-2 rounded-md hover:bg-blue-600 disabled:bg-gray-300" :disabled="filters.page === totalPages" @click="nextPage">Next</button>
       </div>
       <BaseContextMenu :visible="contextMenuVisible" :position="contextMenuPosition" @close="contextMenuVisible = false">
         <ul>
           <li @click="selectFile(contextMenuFile)">
             <span class="mdi mdi-file-check-outline"></span>
-            Select
+            {{ $t('Select') }}
           </li>
           <li @click="confirmDeleteItem(contextMenuFile)">
             <span class="mdi mdi-delete-outline"></span>
-            Delete
+            {{ $t('Delete') }}
           </li>
         </ul>
       </BaseContextMenu>
@@ -129,42 +129,42 @@
         <small v-if="submitted && !item.title" class="p-error">{{ $t('Title is required') }}</small>
       </div>
       <template #footer>
-        <Button class="p-button-text" icon="pi pi-times" label="Cancel" @click="hideDialog" />
-        <Button class="p-button-text" icon="pi pi-check" label="Save" @click="saveItem" />
+        <Button class="p-button-text" icon="pi pi-times" :label="$t('Cancel')" @click="hideDialog" />
+        <Button class="p-button-text" icon="pi pi-check" :label="$t('Save')" @click="saveItem" />
       </template>
     </Dialog>
 
-    <Dialog v-model:visible="deleteDialog" :modal="true" :style="{ width: '450px' }" header="Confirm">
+    <Dialog v-model:visible="deleteDialog" :modal="true" :style="{ width: '450px' }" :header="$t('Confirm')">
       <div class="confirmation-content">
         <i class="pi pi-exclamation-triangle p-mr-3" style="font-size: 2rem"></i>
-        <span>Are you sure you want to delete <b>{{ itemToDelete?.title }}</b>?</span>
+        <span>{{ $t('Are you sure you want to delete') }} <b>{{ itemToDelete?.title }}</b>?</span>
       </div>
       <template #footer>
-        <Button class="p-button-text" icon="pi pi-times" label="No" @click="deleteDialog = false" />
-        <Button class="p-button-text" icon="pi pi-check" label="Yes" @click="deleteItemButton" />
+        <Button class="p-button-text" icon="pi pi-times" :label="$t('No')" @click="deleteDialog = false" />
+        <Button class="p-button-text" icon="pi pi-check" :label="$t('Yes')" @click="deleteItemButton" />
       </template>
     </Dialog>
 
-    <Dialog v-model:visible="deleteMultipleDialog" :modal="true" :style="{ width: '450px' }" header="Confirm">
+    <Dialog v-model:visible="deleteMultipleDialog" :modal="true" :style="{ width: '450px' }" :header="$t('Confirm')">
       <div class="confirmation-content">
         <i class="pi pi-exclamation-triangle p-mr-3" style="font-size: 2rem"></i>
         <span>{{ $t('Are you sure you want to delete the selected items?') }}</span>
       </div>
       <template #footer>
-        <Button class="p-button-text" icon="pi pi-times" label="No" @click="deleteMultipleDialog = false" />
-        <Button class="p-button-text" icon="pi pi-check" label="Yes" @click="deleteMultipleItems" />
+        <Button class="p-button-text" icon="pi pi-times" :label="$t('No')" @click="deleteMultipleDialog = false" />
+        <Button class="p-button-text" icon="pi pi-check" :label="$t('Yes')" @click="deleteMultipleItems" />
       </template>
     </Dialog>
 
     <Dialog v-model:visible="detailsDialogVisible" :header="selectedItem.title || 'Item Details'" :modal="true" :style="{ width: '50%' }">
       <div v-if="Object.keys(selectedItem).length > 0">
-        <p><strong>Title:</strong> {{ selectedItem.title }}</p>
-        <p><strong>Modified:</strong> {{ relativeDatetime(selectedItem.resourceNode.updatedAt) }}</p>
-        <p><strong>Size:</strong> {{ prettyBytes(selectedItem.resourceNode.firstResourceFile.size) }}</p>
-        <p><strong>URL:</strong> <a :href="selectedItem.contentUrl" target="_blank">Open File</a></p>
+        <p><strong>{{ $t('Title') }}:</strong> {{ selectedItem.title }}</p>
+        <p><strong>{{ $t('Modified') }}:</strong> {{ relativeDatetime(selectedItem.resourceNode.updatedAt) }}</p>
+        <p><strong>{{ $t('Size') }}:</strong> {{ prettyBytes(selectedItem.resourceNode.firstResourceFile.size) }}</p>
+        <p><strong>URL:</strong> <a :href="selectedItem.contentUrl" target="_blank">{{ $t('Open file') }}</a></p>
       </div>
       <template #footer>
-        <Button class="p-button-text" label="Close" @click="closeDetailsDialog" />
+        <Button class="p-button-text" :label="$t('Close')" @click="closeDetailsDialog" />
       </template>
     </Dialog>
   </div>

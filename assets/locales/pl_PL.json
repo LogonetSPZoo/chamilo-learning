@@ -452,7 +452,7 @@
   "Download all": "Pobierz wszystko",
   "Select all": "Zaznacz wszystko",
   "Unselect all": "Odznacz wszystko",
-  "Are you sure you want to delete": "Usun\u0105\u0107? Jeste\u015b pewien?",
+  "Are you sure you want to delete": "Czy na pewno chcesz usun\u0105\u0107",
   "Space available": "Dost\u0119pna przestrze\u0144",
   "Add as a template": "Dodaj szablon",
   "Saved": "Zapisano",
@@ -754,5 +754,6 @@
   "Closing dateComment": "Data zamkni\u0119cia",
   "GroupForum": "Forum grupy",
   "Public access (access authorized to any member of the course)Private access (access authorized to group members only)": "Dost\u0119p publiczny (dost\u0119p autoryzowany dla ka\u017Cdego cz\u0142onka kursu) Dost\u0119p prywatny (dost\u0119p autoryzowany tylko dla cz\u0142onk\u00F3w grupy)",
-  "User %s with language %s registered to the site" : "U\u017Cytkownik %s z j\u0119zykiem %s zarejestrowany na stronie"
+  "User %s with language %s registered to the site" : "U\u017Cytkownik %s z j\u0119zykiem %s zarejestrowany na stronie",
+  "Open file": "Otw\u00f3rz plik"
 }

@@ -1,5 +1,5 @@
 export default {
-  path: '/resources/ccalendarevent',
+  path: '/resources/calendarevent',
   meta: { requiresAuth: true },
   name: 'ccalendarevent',
   redirect: { name: 'CCalendarEventList' },

@@ -753,5 +753,6 @@
   "Public access (access authorized to any member of the course)ation dateComment": "Dost\u0119p publiczny (dost\u0119p autoryzowany dla ka\u017Cdego cz\u0142onka kursu)",
   "Closing dateComment": "Data zamkni\u0119cia",
   "GroupForum": "Forum grupy",
-  "Public access (access authorized to any member of the course)Private access (access authorized to group members only)": "Dost\u0119p publiczny (dost\u0119p autoryzowany dla ka\u017Cdego cz\u0142onka kursu) Dost\u0119p prywatny (dost\u0119p autoryzowany tylko dla cz\u0142onk\u00F3w grupy)"
+  "Public access (access authorized to any member of the course)Private access (access authorized to group members only)": "Dost\u0119p publiczny (dost\u0119p autoryzowany dla ka\u017Cdego cz\u0142onka kursu) Dost\u0119p prywatny (dost\u0119p autoryzowany tylko dla cz\u0142onk\u00F3w grupy)",
+  "User %s with language %s registered to the site" : "U\u017Cytkownik %s z j\u0119zykiem %s zarejestrowany na stronie"
 }

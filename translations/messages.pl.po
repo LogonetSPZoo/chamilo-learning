@@ -28181,3 +28181,12 @@ msgstr "Ten test można osadzić"
 
 msgid "%s's picture"
 msgstr "Zdjęcie %s"
+
+msgid "Welcome, please go to course list at %s."
+msgstr "Witamy, przejdź do listy kursów na %s."
+
+msgid "CourseList"
+msgstr "Lista kursów"
+
+msgid "PlatformAdmin"
+msgstr "Administracja"

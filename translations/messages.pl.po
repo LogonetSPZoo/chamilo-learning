@@ -8751,7 +8751,7 @@ msgid "You left some fields empty.<br>Use the <b>Back</b> button on your browser
 msgstr "Zostawiłeś niewypełnione pola.<br>Użyj przycisku Wstecz i spróbuj jeszcze raz.<br>Jeśli zignorujesz Kod kursu spójrz do Programu kursu"
 
 msgid "Please confirm your choice"
-msgstr "Potwierdź swój wybór"
+msgstr "Czy na pewno chcesz to zrobić?"
 
 msgid "and"
 msgstr "i"
@@ -28202,3 +28202,15 @@ msgstr "Administrator"
 
 msgid "Your Reg"
 msgstr "Nowe konto na"
+
+msgid "ConfirmYourChoice"
+msgstr "Potwierdź swój wybór"
+
+msgid "Account is removed temporally"
+msgstr "Konto zostało tymczasowo usunięte"
+
+msgid "Destroy"
+msgstr "Usuń na stałe"
+
+msgid "DeletePermanently"
+msgstr "Usuń na stałe"

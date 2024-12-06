@@ -142,10 +142,10 @@ $(function () {
       text: "",
       icon: "warning",
       showCancelButton: true,
-      cancelButtonText: "Cancel",
+      cancelButtonText: "Anuluj",
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes",
+      confirmButtonText: "Tak",
     }).then((result) => {
       if (result.value) {
         /*Swal.fire(
@@ -460,8 +460,9 @@ function setCheckbox(value, table_id) {
 
 function action_click(element, table_id) {
   var d = $("#" + table_id)
-  if (!confirm("ConfirmYourChoice")) {
-    //if (!confirm('{{ "ConfirmYourChoice"|get_lang }}')) {
+  if (!confirm("Czy na pewno chcesz to zrobić?")) {
+  // if (!confirm("ConfirmYourChoice")) {
+  // if (!confirm('{{ "ConfirmYourChoice"|get_lang }}')) {
     return false
   } else {
     var action = $(element).attr("data-action")

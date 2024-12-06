@@ -58,16 +58,16 @@ export function useSocialMenuItems() {
 
   const items = computed(() => {
     const menuItems = [
-      { icon: 'mdi mdi-home', label: t("Home"), route: '/social' },
+      // { icon: 'mdi mdi-home', label: t("Home"), route: '/social' },
       { icon: 'mdi mdi-email', label: t("Messages"), route: '/resources/messages', badgeCount: unreadMessagesCount.value },
-      { icon: 'mdi mdi-handshake', label: t("My friends"), route: { name: 'UserRelUserList' } },
+      // { icon: 'mdi mdi-handshake', label: t("My friends"), route: { name: 'UserRelUserList' } },
       { icon: 'mdi mdi-briefcase', label: t("My files"), route: { name: 'PersonalFileList', params: { node: securityStore.user.resourceNode.id } } },
       { icon: 'mdi mdi-account', label: t("Personal data"), route: '/resources/users/personal_data' },
     ]
 
-    if (!hideSocialGroupBlock.value) {
-      menuItems.splice(3, 0, { icon: 'mdi mdi-group', label: t("Social groups"), route: groupLink.value, isLink: isValidGlobalForumsCourse.value })
-    }
+    // if (!hideSocialGroupBlock.value) {
+    //   menuItems.splice(3, 0, { icon: 'mdi mdi-group', label: t("Social groups"), route: groupLink.value, isLink: isValidGlobalForumsCourse.value })
+    // }
 
     return isCurrentUser.value ? menuItems : [
       { icon: 'mdi mdi-home', label: t("Home"), route: '/social' },

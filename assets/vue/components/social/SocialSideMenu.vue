@@ -10,15 +10,15 @@
       v-if="isCurrentUser"
       class="menu-list"
     >
-      <li :class="['menu-item', { active: isActive('/social') }]">
-        <BaseAppLink to="/social">
-          <i
-            aria-hidden="true"
-            class="mdi mdi-home"
-          ></i>
-          {{ t("Home") }}
-        </BaseAppLink>
-      </li>
+<!--      <li :class="['menu-item', { active: isActive('/social') }]">-->
+<!--        <BaseAppLink to="/social">-->
+<!--          <i-->
+<!--            aria-hidden="true"-->
+<!--            class="mdi mdi-home"-->
+<!--          ></i>-->
+<!--          {{ t("Home") }}-->
+<!--        </BaseAppLink>-->
+<!--      </li>-->
       <li :class="['menu-item', { active: isActive('/resources/messages') }]">
         <BaseAppLink to="/resources/messages">
           <i
@@ -33,52 +33,52 @@
           >
         </BaseAppLink>
       </li>
-      <li :class="['menu-item', { active: isActive('/resources/friends/invitations') }]">
-        <BaseAppLink :to="{ name: 'Invitations' }">
-          <i
-            aria-hidden="true"
-            class="mdi mdi-mailbox"
-          ></i>
-          {{ t("Invitations") }}
-          <span
-            v-if="invitationsCount > 0"
-            class="badge badge-warning"
-            >{{ invitationsCount }}</span
-          >
-        </BaseAppLink>
-      </li>
-      <li :class="['menu-item', { active: isActive('/resources/friends') }]">
-        <BaseAppLink :to="{ name: 'UserRelUserList' }">
-          <i
-            aria-hidden="true"
-            class="mdi mdi-handshake"
-          ></i>
-          {{ t("My friends") }}
-        </BaseAppLink>
-      </li>
-      <li :class="['menu-item', { active: isActive(groupLink) }]">
-        <a
-          v-if="isValidGlobalForumsCourse"
-          :href="groupLink"
-          rel="noopener noreferrer"
-        >
-          <i
-            aria-hidden="true"
-            class="mdi mdi-group"
-          ></i>
-          {{ t("Social groups") }}
-        </a>
-        <BaseAppLink
-          v-else
-          :to="groupLink"
-        >
-          <i
-            aria-hidden="true"
-            class="mdi mdi-group"
-          ></i>
-          {{ t("Social groups") }}
-        </BaseAppLink>
-      </li>
+<!--      <li :class="['menu-item', { active: isActive('/resources/friends/invitations') }]">-->
+<!--        <BaseAppLink :to="{ name: 'Invitations' }">-->
+<!--          <i-->
+<!--            aria-hidden="true"-->
+<!--            class="mdi mdi-mailbox"-->
+<!--          ></i>-->
+<!--          {{ t("Invitations") }}-->
+<!--          <span-->
+<!--            v-if="invitationsCount > 0"-->
+<!--            class="badge badge-warning"-->
+<!--            >{{ invitationsCount }}</span-->
+<!--          >-->
+<!--        </BaseAppLink>-->
+<!--      </li>-->
+<!--      <li :class="['menu-item', { active: isActive('/resources/friends') }]">-->
+<!--        <BaseAppLink :to="{ name: 'UserRelUserList' }">-->
+<!--          <i-->
+<!--            aria-hidden="true"-->
+<!--            class="mdi mdi-handshake"-->
+<!--          ></i>-->
+<!--          {{ t("My friends") }}-->
+<!--        </BaseAppLink>-->
+<!--      </li>-->
+<!--      <li :class="['menu-item', { active: isActive(groupLink) }]">-->
+<!--        <a-->
+<!--          v-if="isValidGlobalForumsCourse"-->
+<!--          :href="groupLink"-->
+<!--          rel="noopener noreferrer"-->
+<!--        >-->
+<!--          <i-->
+<!--            aria-hidden="true"-->
+<!--            class="mdi mdi-group"-->
+<!--          ></i>-->
+<!--          {{ t("Social groups") }}-->
+<!--        </a>-->
+<!--        <BaseAppLink-->
+<!--          v-else-->
+<!--          :to="groupLink"-->
+<!--        >-->
+<!--          <i-->
+<!--            aria-hidden="true"-->
+<!--            class="mdi mdi-group"-->
+<!--          ></i>-->
+<!--          {{ t("Social groups") }}-->
+<!--        </BaseAppLink>-->
+<!--      </li>-->
       <li :class="['menu-item', { active: isActive('/social/search') }]">
         <BaseAppLink to="/social/search">
           <i

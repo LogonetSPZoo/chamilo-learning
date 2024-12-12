@@ -45,11 +45,6 @@ class ProfileType extends AbstractType
             ->add('email', EmailType::class, ['label' => 'Email', 'required' => true])
             // ->add('official_code', TextType::class)
             // ->add('groups')
-            ->add('locale', LocaleType::class, [
-                // 'preferred_choices' => ['en', 'fr_FR', 'es_ES', 'pt', 'nl'],
-                'choices' => $languages,
-                'choice_loader' => null,
-            ])
             /*->add(                'dateOfBirth',
                 BirthdayType::class,
                 [
@@ -72,11 +67,11 @@ class ProfileType extends AbstractType
             ))*/
         ;
 
-        if ('true' === $this->settingsManager->getSetting('use_users_timezone')) {
-            $builder
-                ->add('timezone', TimezoneType::class, ['label' => 'Timezone', 'required' => true])
-            ;
-        }
+//        if ('true' === $this->settingsManager->getSetting('use_users_timezone')) {
+//            $builder
+//                ->add('timezone', TimezoneType::class, ['label' => 'Timezone', 'required' => true])
+//            ;
+//        }
 
         $builder
             ->add('phone', TextType::class, ['label' => 'Phone number', 'required' => false])
@@ -85,10 +80,15 @@ class ProfileType extends AbstractType
                 IllustrationType::class,
                 ['label' => 'Picture', 'required' => false, 'mapped' => false]
             )
+            ->add('locale', LocaleType::class, [
+                // 'preferred_choices' => ['en', 'fr_FR', 'es_ES', 'pt', 'nl'],
+                'choices' => $languages,
+                'choice_loader' => null,
+            ])
             // ->add('website', UrlType::class, ['label' => 'Website', 'required' => false])
         ;
 
-        $builder->add('extra_fields', ExtraFieldType::class, ['mapped' => false]);
+//        $builder->add('extra_fields', ExtraFieldType::class, ['mapped' => false]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

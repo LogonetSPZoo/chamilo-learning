@@ -2403,7 +2403,7 @@ class Exercise
         if (isset($_GET['id'])) {
             $form->addButtonSave(get_lang('Edit test name and settings'), 'submitExercise');
         } else {
-            $form->addButtonUpdate(get_lang('Proceed to questions'), 'submitExercise');
+            $form->addButtonUpdate(get_lang('Save and proceed to questions'), 'submitExercise');
         }
 
         $form->addRule('exerciseTitle', get_lang('Name'), 'required');

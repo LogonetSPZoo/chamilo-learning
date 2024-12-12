@@ -8336,6 +8336,9 @@ msgstr "Pokaż wynik studentowi"
 msgid "Proceed to questions"
 msgstr "Przejdź do pytań"
 
+msgid "Save and proceed to questions"
+msgstr "Zapisz i przejdź do pytań"
+
 msgid "Add this question to the test"
 msgstr "Dodaj pytanie do testu"
 

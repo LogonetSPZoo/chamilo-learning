@@ -136,8 +136,8 @@ class CLp extends AbstractResource implements ResourceInterface, ResourceShowCou
     #[ORM\Column(name: 'next_lp_id', type: 'integer', nullable: false, options: ['default' => 0])]
     protected int $nextLpId;
 
-    #[ORM\Column(name: 'subscribe_user_by_date', type: 'boolean', nullable: false, options: ['default' => 0])]
-    protected bool $subscribeUserByDate;
+    #[ORM\Column(name: 'subscribe_user_by_date', type: 'boolean', nullable: false, options: ['default' => false])]
+    protected ?bool $subscribeUserByDate = false;
 
     #[ORM\Column(name: 'display_not_allowed_lp', type: 'boolean', nullable: true, options: ['default' => 0])]
     protected bool $displayNotAllowedLp;
@@ -554,12 +554,12 @@ class CLp extends AbstractResource implements ResourceInterface, ResourceShowCou
         return $this;
     }
 
-    public function getSubscribeUserByDate(): bool
+    public function getSubscribeUserByDate(): ?bool
     {
         return $this->subscribeUserByDate;
     }
 
-    public function setSubscribeUserByDate(bool $subscribeUserByDate): self
+    public function setSubscribeUserByDate(?bool $subscribeUserByDate): self
     {
         $this->subscribeUserByDate = $subscribeUserByDate;
 

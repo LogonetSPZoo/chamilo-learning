@@ -95,7 +95,7 @@ class ExtraField
     #[Assert\NotBlank]
     #[Groups(['extra_field:read', 'extra_field:write'])]
     #[Gedmo\Translatable]
-    #[ORM\Column(name: 'display_text', type: 'string', length: 255, nullable: true, unique: false)]
+    #[ORM\Column(name: 'display_text', type: 'text', nullable: true, unique: false)]
     protected ?string $displayText = null;
     #[ORM\Column(name: 'helper_text', type: 'text', nullable: true, unique: false)]
     protected ?string $helperText = null;

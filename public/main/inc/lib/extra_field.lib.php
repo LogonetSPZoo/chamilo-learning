@@ -1234,7 +1234,7 @@ class ExtraField extends Model
                                     'extra_'.$variable,
                                     $option_details['option_value'],
                                     get_lang($option_details['display_text']).'<br />',
-                                    $option_details['option_value']
+                                    ['value' => $option_details['option_value']]
                                 );
                             }
                         } else {

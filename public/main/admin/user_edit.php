@@ -131,7 +131,7 @@ if (api_is_western_name_order()) {
 }
 
 // Official code
-$form->addElement('text', 'official_code', get_lang('Code'), ['size' => '40']);
+$form->addElement('text', 'official_code', 'Kod', ['size' => '40']);
 $form->applyFilter('official_code', 'html_filter');
 $form->applyFilter('official_code', 'trim');
 
@@ -153,7 +153,7 @@ if ('true' == api_get_setting('login_is_email')) {
 }
 
 // Phone
-$form->addElement('text', 'phone', get_lang('Phone number'));
+$form->addElement('text', 'phone', 'Numer telefonu (widoczny na profilu)');
 
 // Picture
 $form->addFile(
@@ -306,8 +306,9 @@ if (!$hideFields) {
     $form->addGroup($group, 'max_member_group', null, null, false);
 
     // active account or inactive account
-    $form->addElement('radio', 'active', get_lang('Account'), get_lang('active'), 1);
+    $form->addElement('radio', 'active', 'Status konta', get_lang('active'), 1);
     $form->addElement('radio', 'active', '', get_lang('inactive'), 0);
+    $form->addElement('radio', 'active', '', 'Niezweryfikowane', -3);
 } else {
     $form->addElement('hidden', 'active', $user_data['active']);
     $form->addElement('hidden', 'expiration_date', $user_data['expiration_date']);

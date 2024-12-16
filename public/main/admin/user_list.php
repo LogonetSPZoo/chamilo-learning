@@ -21,6 +21,7 @@ $currentUserId = api_get_user_id();
 $action = $_REQUEST['action'] ?? '';
 $view = $_GET['view'] ?? 'all';
 $showDeletedUsers = 'deleted' === $view;
+$showNewUsers = 'new' === $view;
 
 // Login as can be used by different roles
 if (isset($_GET['user_id']) && 'login_as' === $action) {
@@ -162,7 +163,7 @@ function trimVariables()
  * to construct the base SQL query. It supports filtering for active, inactive,
  * and deleted users based on the provided parameters.
  */
-function prepare_user_sql_query(bool $getCount, bool $showDeletedUsers = false): string
+function prepare_user_sql_query(bool $getCount, bool $showDeletedUsers = false, bool $showNewUsers = false): string
 {
     $sql = '';
     $user_table = Database::get_main_table(TABLE_MAIN_USER);
@@ -386,7 +387,9 @@ function prepare_user_sql_query(bool $getCount, bool $showDeletedUsers = false):
 
     if ($showDeletedUsers) {
         $sql .= !str_contains($sql, 'WHERE') ? ' WHERE u.active = '.USER_SOFT_DELETED : ' AND u.active = '.USER_SOFT_DELETED;
-    } else {
+    } elseif($showNewUsers) {
+        $sql .= !str_contains($sql, 'WHERE') ? ' WHERE u.active = '.USER_NEW_INACTIVE : ' AND u.active = '.USER_NEW_INACTIVE;
+    }else {
         $sql .= !str_contains($sql, 'WHERE') ? ' WHERE u.active <> '.USER_SOFT_DELETED : ' AND u.active <> '.USER_SOFT_DELETED;
     }
     $sql .= ' AND u.status <> '.User::ROLE_FALLBACK;
@@ -399,9 +402,9 @@ function prepare_user_sql_query(bool $getCount, bool $showDeletedUsers = false):
  * configured to either include or exclude users marked as deleted based on the
  * provided parameter.
  */
-function get_number_of_users(bool $showDeletedUsers = false): int
+function get_number_of_users(bool $showDeletedUsers = false, bool $showNewUsers = false): int
 {
-    $sql = prepare_user_sql_query(true, $showDeletedUsers);
+    $sql = prepare_user_sql_query(true, $showDeletedUsers, $showNewUsers);
     $res = Database::query($sql);
     $obj = Database::fetch_object($res);
 
@@ -413,9 +416,9 @@ function get_number_of_users(bool $showDeletedUsers = false): int
  * is used to populate a sortable and paginated table of users, allowing for dynamic data retrieval
  * based on user interaction with the table (such as sorting and pagination).
  */
-function get_user_data(int $from, int $number_of_items, int $column, string $direction, bool $showDeletedUsers = false): array
+function get_user_data(int $from, int $number_of_items, int $column, string $direction, bool $showDeletedUsers = false, bool $showNewUsers = false): array
 {
-    $sql = prepare_user_sql_query(false, $showDeletedUsers);
+    $sql = prepare_user_sql_query(false, $showDeletedUsers, $showNewUsers);
     if (!in_array($direction, ['ASC', 'DESC'])) {
         $direction = 'ASC';
     }
@@ -864,7 +867,7 @@ function modify_filter($user_id, $url_params, $row): string
 function active_filter(int $active, string $params, array $row): string
 {
     $_user = api_get_user_info();
-
+    $newUser = false;
     $action = 'Unlock';
     $image = StateIcon::WARNING;
     if (USER_ACTIVE == $active) {
@@ -876,19 +879,27 @@ function active_filter(int $active, string $params, array $row): string
     } elseif (USER_SOFT_DELETED == $active) {
         $action = 'soft_deleted';
         $image = StateIcon::REJECT;
+    } else if(USER_NEW_INACTIVE == $active) {
+        $action = 'edit';
+        $newUser = true;
+        $image = StateIcon::INCOMPLETE;
     }
 
     $result = '';
 
     if (in_array($action, ['edit', 'soft_deleted'])) {
+        $title = 'edit' === $action ? get_lang('Account expired') : get_lang('Account is removed temporally');
+        if($newUser) {
+            $title = 'Konto niezweryfikowane';
+        }
         $result = Display::getMdiIcon(
             $image,
             'ch-tool-icon',
             null,
             ICON_SIZE_TINY,
-            'edit' === $action ? get_lang('Account expired') : get_lang('Account is removed temporally')
+            $title
         );
-    } elseif ($row['0'] != $_user['user_id']) {
+    }elseif ($row['0'] != $_user['user_id']) {
         // you cannot lock yourself out otherwise you could disable all the
         // accounts including your own => everybody is locked out and nobody
         // can change it anymore.
@@ -1258,11 +1269,11 @@ $defaults['keyword_inactive'] = 1;
 $form->setDefaults($defaults);
 
 $form = '<div id="advanced_search_form" style="display:none;">'.$form->returnForm().'</div>';
-
+$userCountToVerify = get_number_of_users(false, true);
 $table = new SortableTable(
     'users',
-    function() use ($showDeletedUsers) { return get_number_of_users($showDeletedUsers); },
-    function($from, $number_of_items, $column, $direction) use ($showDeletedUsers) { return get_user_data($from, $number_of_items, $column, $direction, $showDeletedUsers); },
+    function() use ($showDeletedUsers, $showNewUsers) { return get_number_of_users($showDeletedUsers, $showNewUsers); },
+    function($from, $number_of_items, $column, $direction) use ($showDeletedUsers, $showNewUsers) { return get_user_data($from, $number_of_items, $column, $direction, $showDeletedUsers, $showNewUsers); },
     (api_is_western_name_order() xor api_sort_by_first_name()) ? 3 : 2,
     20,
     'ASC'
@@ -1390,6 +1401,9 @@ if (0 == $table->get_total_number_of_items()) {
 $tabsHtml = '
 <div class="users-list">
     <ul class="nav nav-tabs">
+      <li class="nav-item '.($view == 'new' ? 'active' : '').'">
+        <a class="nav-link '.($view == 'new' ? 'active' : '').'" href="user_list.php?view=new">Oczekujący użytkownicy ('.$userCountToVerify.')</a>
+      </li>
       <li class="nav-item '.($view == 'all' ? 'active' : '').'">
         <a class="nav-link '.($view == 'all' ? 'active' : '').'" href="user_list.php?view=all">'.get_lang('All users').'</a>
       </li>

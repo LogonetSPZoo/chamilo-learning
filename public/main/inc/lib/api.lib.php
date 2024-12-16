@@ -674,6 +674,7 @@ define('USER_ACTIVE', 1);
 define('USER_INACTIVE', 0);
 define('USER_INACTIVE_AUTOMATIC', -1);
 define('USER_SOFT_DELETED', -2);
+define('USER_NEW_INACTIVE', -3);
 
 /**
  * Returns a path to a certain resource within Chamilo.

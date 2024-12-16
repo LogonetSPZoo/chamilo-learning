@@ -53,6 +53,8 @@ class SecurityController extends AbstractController
         if (1 !== $user->getActive()) {
             if (0 === $user->getActive()) {
                 $message = $translator->trans('Account not activated.');
+            } else if(-3 === $user->getActive()) {
+                $message = 'Twoje konto oczekuje na weryfikację przez administratora. Spróbuj ponownie później.';
             } else {
                 $message = $translator->trans('Invalid credentials. Please try again or contact support if you continue to experience issues.');
             }

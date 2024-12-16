@@ -12,6 +12,8 @@ parameters:
             resources:
                 - 'GeneratorBundle::fields.html.twig'
     course_info_is_not_editable: false
+    mailerMail: '%env(MAILER_MAIL)%'
+    mailerName: '%env(MAILER_NAME)%'
 
     #    router.request_context.base_url: '%env(APP_URL_APPEND)%'
     #    asset.request_context.base_path: '%env(APP_URL_APPEND)%'

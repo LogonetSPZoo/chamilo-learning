@@ -929,7 +929,7 @@ if ($form->validate()) {
             null,
             PLATFORM_AUTH_SOURCE,
             null,
-            1,
+            -3,
             0,
             $extraParams,
             null,
@@ -1075,6 +1075,16 @@ if ($form->validate()) {
 
                 Display::display_header($toolName);
                 //echo $content;
+                Display::display_footer();
+                exit;
+            } elseif('true' === api_get_setting('allow_registration')) {
+                $chamiloUser = api_get_user_entity($userId);
+                UserManager::needApproval($userId);
+                unset($userId);
+                Display::display_header($toolName);
+                echo Display::page_header($toolName);
+                $content = 'Formularz został wypełniony pomyślnie! Twoje konto musi teraz zostać zatwierdzone przez administratora.';
+                echo $content;
                 Display::display_footer();
                 exit;
             }

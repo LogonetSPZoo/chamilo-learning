@@ -1,14 +1,16 @@
-{% set user_locale = locale is defined ? locale : 'en' %}
+    {% set user_locale = locale is defined ? locale : 'pl' %}
 {% trans_default_domain 'messages' %}
 
 {% autoescape false %}
-    <p>{{ 'Dear'|trans({}, 'messages', user_locale) }} {{ complete_name }},</p>
-    <p>{{ 'Welcome to this platform'|trans({}, 'messages', user_locale) }}</p>
-    <p>{{ 'You are registered to'|trans({}, 'messages', user_locale) }} {{ 'platform.site_name' | api_get_setting }} {{ 'with the following settings:'|trans({}, 'messages', user_locale) }}</p>
-    <p>{{ 'Username'|trans({}, 'messages', user_locale) }} : {{ login_name }}<br>
-        {{ 'Pass'|trans({}, 'messages', user_locale) }} : ***********</p>
+    <p>Szanowna/y {{ complete_name }},</p>
+    <p>Witamy na {{ 'platform.site_name' | api_get_setting }}</p>
+    <p>Twój formularz rekrutacyjny został przesłany i oczekuje na weryfikację.</p>
+    <p>Gdy tylko zostanie ona zakończona, otrzymasz powiadomienie na podany adres e-mail.</p>
+    <p>Poniżej znajdują się dane logowania do platformy:</p>
+    <p>Nazwa użytkownika: {{ login_name }}<br>
+        Hasło: ***********</p>
     <br>
-    <p>{{ 'For more details visit %s'|trans({'%s': search_link}, 'messages', user_locale) }}</p>
+    <p>Aby uzyskać więcej informacji, odwiedź <a href="{{ search_link }}">{{ search_link }}</a></p>
     <p>{{ 'In case of trouble, contact us.'|trans({}, 'messages', user_locale) }}</p>
     <br>
     <p>{{ 'Sincerely'|trans({}, 'messages', user_locale) }}</p>

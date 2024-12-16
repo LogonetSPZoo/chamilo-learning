@@ -1,6 +1,5 @@
 {% autoescape false %}
-<p>{{ 'User %s with language %s registered to the site'|trans|format(complete_name, user_language) }} </p>
-<p>{{ 'His profile is'|trans }} </p>
+<p>Użytkownik {{ complete_name }} wypełnił formularz rekrutacyjny.</p>
 <div class="row">
     <div class="col-xs-12 col-md-12">
         <div class="form-horizontal">
@@ -8,8 +7,9 @@
         </div>
     </div>
 </div>
-
-<p>{{ 'You can assign a tutor in this link %s'|trans|format(link)}} </p>
-
+<br/>
+<p>Możesz zatwierdzić lub odrzucić formularz rekrutacyjny, klikając w link poniżej:</p>
+<p>{{ link }}</p>
+<br/>
 {% include '@ChamiloCore/Mailer/Legacy/_admin_signature_footer.html.twig' %}
 {% endautoescape %}

@@ -28217,3 +28217,6 @@ msgstr "Usuń na stałe"
 
 msgid "DeletePermanently"
 msgstr "Usuń na stałe"
+
+msgid "Account not activated."
+msgstr "Konto nie jest aktywowane."

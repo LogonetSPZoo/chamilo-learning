@@ -1047,6 +1047,16 @@ class UserManager
         return true;
     }
 
+    public static function needApproval($user_id)
+    {
+        if (empty($user_id)) {
+            return false;
+        }
+        self::change_active_state($user_id, -3);
+
+        return true;
+    }
+
     /**
      * Enable a user.
      *

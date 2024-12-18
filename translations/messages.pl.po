@@ -16839,10 +16839,7 @@ msgid "The information about this course request is considered protected; it can
 msgstr "Informacje na temat zamówienia są chronione. Wymagane informacje potrzebne tylko do utworzenia nowego kursu na platformie e-learningowej. Nie powinny być ujawniane osobom trzecim."
 
 msgid "Courses validation"
-msgstr "Wartość kursu"
-
-msgid "When the \"Courses validation\" feature is enabled, a teacher is not able to create a course alone. He/she fills a course request. The platform administrator reviews the request and approves it or rejects it.<br />This feature relies on automated e-mail messaging; set Chamilo to access an e-mail server and to use a dedicated an e-mail account."
-msgstr "Kiedy funkcja \"Wartość kursu\" jest włączona, nauczyciel nie może sam stworzyć kursu. On/ona wypełnia wniosek o kurs. Administrator platformy przegląda wniosek i go zatwierdza lub odrzuca."
+msgstr "Walidacja kursów"
 
 msgid "%s A request for additional information about the course request %s"
 msgstr "%s Prośba o dodatkowe informacje na temat zamówienia kursu %s"
@@ -16863,10 +16860,7 @@ msgid "To our regret we have to inform you that your course request %s has been 
 msgstr "Z przykrością informujemy, że Twoje zamówienie kursu %s zostało odrzucone. Nie spełniono wymagań."
 
 msgid "Course validation - a link to the terms and conditions"
-msgstr "Wartość kursu - link do regulaminu"
-
-msgid "This is the URL to the \"Terms and Conditions\" document that is valid for making a course request. If the address is set here, the user should read and agree with these terms and conditions before sending a course request.<br />If you enable Chamilo's \"Terms and Conditions\" module and if you want its URL to be used, then leave this setting empty."
-msgstr "Adres URL do \"Regulaminu\", który jest ważny do złożenia wniosku o kurs. Jeśli adres jest tutaj ustawiony, użytkownik powinien przeczytać i zaakceptować regulamin przed wysłaniem wniosku o kurs."
+msgstr "Walidacja kursu - link do regulaminu"
 
 msgid "The course has not been created due to an internal error."
 msgstr "Kurs nie został utworzony. Wystąpił błąd."
@@ -26629,7 +26623,7 @@ msgid "Given as array of e-mail addresses. Does not work for all cronjobs yet."
 msgstr "Podane jako tablica adresów e-mail. Nie działa jeszcze dla wszystkich zadań cron."
 
 msgid "Extended notifications footer"
-msgstr "Rozszerzony stopka powiadomień"
+msgstr "Rozszerzona stopka powiadomień"
 
 msgid "Add a custom extra footer for notifications emails for a specific language, for example for privacy policy notices. Multiple languages and paragraphs can be added."
 msgstr "Dodaj niestandardowy dodatkowy stopkę dla e-maili powiadomień w określonym języku, na przykład dla powiadomień o polityce prywatności. Można dodać wiele języków i paragrafów."
@@ -28220,3 +28214,282 @@ msgstr "Usuń na stałe"
 
 msgid "Account not activated."
 msgstr "Konto nie jest aktywowane."
+
+msgid "Hide announcements from HRM users"
+msgstr "Jeśli włączone, ogłoszenia nie będą wysyłane do użytkowników HRM."
+
+msgid "If enabled, announcements will not be sent to HRM users."
+msgstr "Ukryj ogłoszenia przed użytkownikami HRM."
+
+msgid "Agenda reminders sender ID"
+msgstr "ID nadawcy przypomnień w kalendarzu (Agenda)"
+
+msgid "The user ID that will be used as the sender for agenda reminders."
+msgstr "ID użytkownika, z którego będą wysyłane przypomnienia o wydarzeniach w kalendarzu."
+
+msgid "My view coloring"
+msgstr "Kolorowanie widoku 'Moje'"
+
+msgid "Defines whether the interface elements in \"My view\" should be displayed with colors."
+msgstr "Określa, czy elementy interfejsu w widoku 'Moje' mają być wyświetlane w kolorze."
+
+msgid "Default platform language"
+msgstr "Domyślny język platformy"
+
+msgid "Sets the default interface language for the platform."
+msgstr "Ustawia domyślny język interfejsu platformy."
+
+msgid "Language priority 1"
+msgstr "Priorytet języka 1"
+
+msgid "The first language considered when determining the user's interface language."
+msgstr "Pierwszy język brany pod uwagę przy ustalaniu języka interfejsu użytkownika."
+
+msgid "Language priority 2"
+msgstr "Priorytet języka 2"
+
+msgid "The second language considered when determining the user's interface language."
+msgstr "Drugi język brany pod uwagę przy ustalaniu języka interfejsu użytkownika."
+
+msgid "Language priority 3"
+msgstr "Priorytet języka 3"
+
+msgid "The third language considered when determining the user's interface language."
+msgstr "Trzeci język brany pod uwagę przy ustalaniu języka interfejsu użytkownika."
+
+msgid "Language priority 4"
+msgstr "Priorytet języka 4"
+
+msgid "The fourth language considered when determining the user's interface language."
+msgstr "Czwarty język brany pod uwagę przy ustalaniu języka interfejsu użytkownika."
+
+msgid "User name display order"
+msgstr "Kolejność wyświetlania imienia i nazwiska"
+
+msgid "Specifies the order in which the user's first and last name are displayed."
+msgstr "Określa kolejność, w jakiej wyświetlane są imię i nazwisko użytkownika."
+
+msgid "User name sorting"
+msgstr "Sortowanie według nazwy użytkownika"
+
+msgid "Defines how users are sorted based on their names."
+msgstr "Określa sposób sortowania użytkowników na podstawie ich nazw."
+
+msgid "Use username as student_id in SCORM communication"
+msgstr "Używaj nazwy użytkownika jako student_id w komunikacji SCORM"
+
+msgid "If enabled, the username will be used as the student_id in SCORM communications."
+msgstr "Jeśli włączone, nazwa użytkownika będzie używana jako student_id w komunikacji SCORM."
+
+msgid "Use extra field as student_id in SCORM communication"
+msgstr "Używaj dodatkowego pola jako student_id w komunikacji SCORM"
+
+msgid "If enabled, the value of a selected extra field will be used as the student_id in SCORM communications."
+msgstr "Jeśli włączone, wartość wybranego dodatkowego pola będzie używana jako student_id w komunikacji SCORM."
+
+msgid "Unblock prerequisite on quiz if max attempts reached"
+msgstr "Odblokuj warunek w ścieżce edukacyjnej po osiągnięciu maksymalnej liczby prób w quizie"
+
+msgid "If enabled, the prerequisite in a learning path is unlocked once the maximum number of quiz attempts is reached, regardless of the quiz score."
+msgstr "Jeśli włączone, warunek w ścieżce edukacyjnej zostanie odblokowany po osiągnięciu maksymalnej liczby prób w quizie, niezależnie od wyniku."
+
+msgid "Chamilo database version"
+msgstr "Wersja bazy danych Chamilo"
+
+msgid "Stores the current Chamilo database schema version."
+msgstr "Przechowuje aktualną wersję schematu bazy danych Chamilo."
+
+msgid "Notification events"
+msgstr "Zdarzenia powiadomień"
+
+msgid "Specifies which events trigger notifications to be sent to users."
+msgstr "Określa, które zdarzenia powodują wysyłanie powiadomień do użytkowników."
+
+msgid "FTP password"
+msgstr "Hasło do FTP"
+
+msgid "Stores the password for the FTP server used by the platform (if applicable)."
+msgstr "Przechowuje hasło do serwera FTP używanego przez platformę (jeśli dotyczy)."
+
+msgid "Path to LZX"
+msgstr "Ścieżka do LZX"
+
+msgid "Specifies the location of the LZX tool used to handle Lectora resources (if applicable)."
+msgstr "Określa położenie narzędzia LZX używanego do obsługi zasobów Lectora (jeśli dotyczy)."
+
+msgid "Password requirements"
+msgstr "Wymagania dotyczące hasła"
+
+msgid "Defines the rules and minimum requirements for user passwords (e.g., length, complexity)."
+msgstr "Określa zasady i minimalne wymagania dla haseł użytkowników (np. długość, złożoność)."
+
+msgid "Allow online users by status"
+msgstr "Zezwól na przeglądanie użytkowników online według statusu"
+
+msgid "If enabled, allows filtering and displaying online users based on their status."
+msgstr "Jeśli włączone, umożliwia filtrowanie i wyświetlanie użytkowników online na podstawie ich statusu."
+
+msgid "Anonymous autoprovisioning"
+msgstr "Automatyczne tworzenie kont anonimowych"
+
+msgid "If enabled, the platform automatically creates anonymous user accounts for certain actions."
+msgstr "Jeśli włączone, platforma automatycznie tworzy konta anonimowych użytkowników dla niektórych działań."
+
+msgid "Hide social groups block"
+msgstr "Ukryj blok grup społecznych"
+
+msgid "If enabled, the social groups block on the homepage or other parts of the platform will be hidden."
+msgstr "Jeśli włączone, blok grup społecznych na stronie głównej lub w innych częściach platformy zostanie ukryty."
+
+msgid "Whether to use the image at var/themes/[your-theme]/images/pdf_logo_header.png as the PDF header logo for all PDF exports (instead of the normal portal logo)"
+msgstr "Czy używać obrazu z lokalizacji var/themes/[your-theme]/images/pdf_logo_header.png jako logo w nagłówku dla wszystkich eksportów PDF (zamiast domyślnego logo portalu)"
+
+msgid "Unblock prerequisite on quiz if max attempts reached"
+msgstr "Odblokuj warunek w ścieżce edukacyjnej po osiągnięciu maksymalnej liczby prób w quizie"
+
+msgid "If enabled, once the maximum number of quiz attempts is reached, the learning path prerequisite will be unlocked, regardless of the quiz score."
+msgstr "Jeśli włączone, po osiągnięciu maksymalnej liczby prób w quizie warunek w ścieżce edukacyjnej zostanie odblokowany, niezależnie od uzyskanego wyniku."
+
+msgid "Unique SMTP sender"
+msgstr "Unikatowy nadawca SMTP"
+
+msgid "If enabled, all emails will be sent using a single, fixed sender address, regardless of the user who initiated the email."
+msgstr "Jeśli włączone, wszystkie e-maile będą wysyłane z jednego, stałego adresu nadawcy, niezależnie od tego, kto rozpoczął ich wysyłkę."
+
+msgid "Sender email address"
+msgstr "Adres e-mail nadawcy"
+
+msgid "The email address that will appear as the sender for all outgoing messages. If left blank, the default SMTP server configuration will be used."
+msgstr "Adres e-mail, który będzie widoczny jako nadawca wszystkich wychodzących wiadomości. Jeśli pozostawisz to pole puste, zostanie użyta domyślna konfiguracja serwera SMTP."
+
+msgid "Sender name"
+msgstr "Nazwa nadawcy"
+
+msgid "The name displayed as the sender of all outgoing messages. This helps recipients identify who the message is from."
+msgstr "Nazwa wyświetlana jako nadawca wszystkich wychodzących wiadomości, co pomaga odbiorcom w identyfikacji nadawcy."
+
+msgid "Portal Administrator: Phone number"
+msgstr "Administrator platformy: Telefon"
+
+msgid "Access to personal file for all"
+msgstr "Dostęp do osobistych plików dla wszystkich"
+
+msgid "Allows all users to access, view, and manage their personal files within the system."
+msgstr "Umożliwia wszystkim użytkownikom dostęp, przeglądanie i zarządzanie ich osobistymi plikami w systemie."
+
+msgid "When the 'Courses validation' feature is enabled, a teacher is not able to create a course alone. He/she fills a course request. The platform administrator reviews the request and approves it or rejects it.<br />This feature relies on automated e-mail messaging; set Chamilo to access an e-mail server and to use a dedicated an e-mail account."
+msgstr "Gdy funkcja 'Courses validation' jest włączona, nauczyciel nie może samodzielnie utworzyć kursu. Wypełnia on wniosek o utworzenie kursu. Administrator platformy przegląda wniosek i zatwierdza go lub odrzuca.<br />Funkcja ta opiera się na zautomatyzowanych wiadomościach e-mail; skonfiguruj Chamilo do korzystania z serwera poczty oraz dedykowanego konta e-mail."
+
+msgid "This is the URL to the 'Terms and Conditions' document that is valid for making a course request. If the address is set here, the user should read and agree with these terms and conditions before sending a course request.<br />If you enable Chamilo's 'Terms and Conditions' module and if you want its URL to be used, then leave this setting empty."
+msgstr "To jest URL do dokumentu 'Terms and Conditions', który obowiązuje przy składaniu wniosku o utworzenie kursu. Jeśli tutaj ustawisz adres, użytkownik powinien przeczytać i zaakceptować te warunki przed wysłaniem wniosku o kurs.<br />Jeśli włączysz moduł 'Terms and Conditions' w Chamilo i chcesz użyć jego adresu URL, pozostaw to ustawienie puste."
+
+msgid "Give a category code to use as course templates. Only those courses will show in the drop-down at course creation time, and users won?t see the courses in this category from the courses catalogue."
+msgstr "Podaj kod kategorii, który będzie używany jako szablony kursów. Tylko te kursy pojawią się na liście rozwijanej podczas tworzenia kursu, a użytkownicy nie zobaczą kursów z tej kategorii w katalogu kursów."
+
+msgid "Show unsubscribe button in ?My courses?"
+msgstr "Pokaż przycisk rezygnacji z kursu w „Moje kursy”"
+
+msgid "Add a button to unsubscribe from a course on the ?My courses? page."
+msgstr "Dodaj przycisk do wypisania się z kursu na stronie „Moje kursy”."
+
+msgid "On the courses/sessions page, the session title can be either of the following : 0 = no link (hide session title) ; 1 = link title to a special session page ; 2 = link to the course if there is only one course ; 3 = session title makes the courses list foldable ; 4 = no link (show session title)."
+msgstr "Na stronie kursów/sesji tytuł sesji może przyjmować jedną z poniższych opcji: 0 = brak linku (ukryj tytuł sesji); 1 = link do specjalnej strony sesji; 2 = link do kursu, jeśli jest tylko jeden kurs; 3 = tytuł sesji sprawia, że lista kursów jest składana; 4 = brak linku (pokaż tytuł sesji)."
+
+msgid "The course rating feature comes by default in different places. If you don?t want it, enable this option."
+msgstr "Funkcja oceniania kursów jest domyślnie dostępna w różnych miejscach. Jeśli nie chcesz z niej korzystać, włącz tę opcję."
+
+msgid "On the ?My courses?/?My sessions? pages, show additional information regarding the score, progress and/or certificate acquisition by the student."
+msgstr "Na stronach „Moje kursy”/„Moje sesje” wyświetl dodatkowe informacje dotyczące wyniku, postępów oraz/lub zdobycia certyfikatu przez studenta."
+
+msgid "When using resources sequencing with courses or sessions, show the dependencies of the course on the course?s homepage."
+msgstr "Podczas korzystania z sekwencjonowania zasobów w kursach lub sesjach, pokaż zależności kursu na stronie głównej kursu."
+
+msgid "When enabled, only the courses with the extra field ?show_in_catalogue? set to 1 will appear in the catalogue."
+msgstr "Gdy włączone, w katalogu pojawią się tylko te kursy, dla których pole dodatkowe „show_in_catalogue” jest ustawione na 1."
+
+msgid "If not empty, the course creation process will look for some fields in the user profile and auto-fill them for the course. For example, a teacher specialized in digital marketing could automatically set a ? digital marketing ? flag on each course (s)he creates."
+msgstr "Jeśli to pole nie jest puste, proces tworzenia kursu wyszuka pewne pola w profilu użytkownika i automatycznie je uzupełni. Na przykład, nauczyciel specjalizujący się w marketingu cyfrowym może automatycznie ustawiać znacznik „digital marketing” dla każdego tworzonego kursu."
+
+msgid "Show courses duration"
+msgstr "Pokaż czas trwania kursów"
+
+msgid "Display the course duration next to the course title in the course catalogue and the courses list."
+msgstr "Wyświetl czas trwania kursu obok tytułu kursu w katalogu kursów i na liście kursów."
+
+msgid "In the course progress tool, you can print a PDF of the different elements. Set ?portrait? or ?landscape? (technical terms) to change it."
+msgstr "W narzędziu śledzenia postępów w kursie możesz wydrukować PDF zawierający różne elementy. Ustaw „portrait” lub „landscape” (terminy techniczne), aby to zmienić."
+
+msgid "Set ?portrait? or ?landscape? (technical terms) for PDF certificates."
+msgstr "Ustaw „portrait” lub „landscape” (terminy techniczne) dla certyfikatów PDF."
+
+msgid "The documents tool can integrate links to files in the cloud. The list of cloud services is limited to a hardcoded list, but you can define the ?links? array that will contain a list of your own list of services/URLs. The list defined here will replace the default list."
+msgstr "Narzędzie dokumentów może integrować linki do plików w chmurze. Lista usług w chmurze jest ograniczona do sztywno zdefiniowanej listy, ale możesz zdefiniować tablicę „links”, która będzie zawierać własną listę usług/URL-i. Lista zdefiniowana tutaj zastąpi listę domyślną."
+
+msgid "Allow trainers and users to upload documents to their dropbox without sending  the documents to themselves"
+msgstr "Pozwól prowadzącym i użytkownikom przesyłać dokumenty do ich własnego dropboxa bez wysyłania tych dokumentów do samych siebie."
+
+msgid "Activate this setting if you want to show MathML-based mathematical formulas and ASCIIsvg-based mathematical graphics not only in the 'Documents' tool, but elsewhere in the system."
+msgstr "Aktywuj to ustawienie, jeśli chcesz wyświetlać formuły matematyczne oparte na MathML i grafiki matematyczne oparte na ASCIIsvg nie tylko w narzędziu 'Documents', ale także w innych miejscach systemu."
+
+msgid "Enable WIRIS mathematical editor. Installing this plugin you get WIRIS editor and WIRIS CAS.<br/>This activation is not fully realized unless it has been previously downloaded the <a href='http://www.wiris.com/es/plugins3/ckeditor/download' target='_blank'>PHP plugin for CKeditor WIRIS</a> and unzipped its contents in the Chamilo's directory main/inc/lib/javascript/ckeditor/plugins/.<br/>This is necessary because Wiris is proprietary software and his services are <a href='http://www.wiris.com/store/who-pays' target='_blank'>commercial</a>. To make adjustments to the plugin, edit configuration.ini file or replace his content by the file configuration.ini.default shipped with Chamilo."
+msgstr "Włącz edytor matematyczny WIRIS. Instalując tę wtyczkę, uzyskasz edytor WIRIS oraz WIRIS CAS.<br/>Pełna aktywacja nie jest możliwa, dopóki nie pobierzesz <a href='http://www.wiris.com/es/plugins3/ckeditor/download' target='_blank'>wtyczki PHP dla CKeditora WIRIS</a> i nie rozpakujesz jej zawartości do katalogu main/inc/lib/javascript/ckeditor/plugins/ w Chamilo.<br/>Jest to konieczne, ponieważ Wiris jest oprogramowaniem własnościowym, a jego usługi są <a href='http://www.wiris.com/store/who-pays' target='_blank'>komercyjne</a>. Aby dostosować wtyczkę, edytuj plik configuration.ini lub zastąp jego zawartość plikiem configuration.ini.default dostarczonym z Chamilo."
+
+msgid "To enable the configuration of the exercise invisibility in session in the base course to by pass the global configuration. If not set the global parameter is used."
+msgstr "Aby włączyć konfigurację niewidoczności ćwiczeń w sesji w kursie bazowym, omijając globalną konfigurację. Jeśli to nie jest ustawione, używany jest parametr globalny."
+
+msgid "Define an array of settings you want to apply to all tests results pages. Settings can be 'hide_question_score', 'hide_expected_answer', 'hide_category_table', 'hide_correct_answered_questions', 'hide_total_score' and possibly more in the future. Look for ?getPageConfigurationAttribute? in the code to see what?s in use."
+msgstr "Zdefiniuj tablicę ustawień, które chcesz zastosować do wszystkich stron z wynikami testów. Ustawienia mogą obejmować 'hide_question_score', 'hide_expected_answer', 'hide_category_table', 'hide_correct_answered_questions', 'hide_total_score' i być może więcej w przyszłości. Poszukaj „getPageConfigurationAttribute” w kodzie, aby zobaczyć, które z nich są używane."
+
+msgid "Enable recording of all answers (even temporary) in the track_e_attempt_recording table. This feautre is experimentaland can create issues in the reporting pages when attempting to grade a test."
+msgstr "Włącz nagrywanie wszystkich odpowiedzi (nawet tymczasowych) w tabeli track_e_attempt_recording. Ta funkcja jest eksperymentalna i może powodować problemy na stronach raportowania podczas próby oceniania testu."
+
+msgid "Provide a list of courses and tests' IDs that will show the best score attempt for any learner in the reports."
+msgstr "Podaj listę identyfikatorów kursów i testów, które pokażą najlepszą próbę uzyskania wyniku dla każdego uczestnika w raportach."
+
+msgid "Set the course ID (numerical) of a course reserverd to use as a global forum. This replaces the 'Social groups' link in the social network by a link to the forum of that course."
+msgstr "Ustaw ID kursu (liczbowy), który będzie używany jako globalne forum. Zastąpi to link 'Social groups' w sieci społecznościowej linkiem do forum tego kursu."
+
+msgid "Add a language filter to the forum view to only see categries configured in a specific language. Requires using the 'language' extra field on the 'forum_category' entity."
+msgstr "Dodaj filtr językowy do widoku forum, aby wyświetlać tylko te kategorie, które są skonfigurowane w konkretnym języku. Wymaga użycia dodatkowego pola 'language' w encji 'forum_category'."
+
+msgid "My view coloring"
+msgstr "Kolorowanie widoku 'Moje'"
+
+msgid "Defines whether the interface elements in \"My view\" should be displayed with colors."
+msgstr "Określa, czy elementy interfejsu w widoku „Moje” mają być wyświetlane w kolorach."
+
+msgid "Default platform language"
+msgstr "Domyślny język platformy"
+
+msgid "Sets the default interface language for the platform."
+msgstr "Ustawia domyślny język interfejsu platformy."
+
+msgid "Platform language"
+msgstr "Język platformy"
+
+msgid "User profile language"
+msgstr "Język profilu użytkownika"
+
+msgid "Selected from login"
+msgstr "Wybrany przy logowaniu"
+
+msgid "Last name, first name"
+msgstr "Nazwisko, imię"
+
+msgid "First name, last name"
+msgstr "Imię, nazwisko"
+
+msgid "Hide the pre-requisites tooltip on learning path items. This is mostly an estaethic choice."
+msgstr "Ukryj podpowiedź dotyczącą warunków wstępnych na elementach ścieżki edukacyjnej. To głównie wybór estetyczny."
+
+msgid "If enabled, once the maximum number of quiz attempts is reached, the learning path prerequisite will be unlocked, regardless of the quiz score."
+msgstr "Jeśli włączone, po osiągnięciu maksymalnej liczby prób w quizie warunek w ścieżce edukacyjnej zostanie odblokowany, niezależnie od wyniku quizu."
+
+msgid "This is one simple measure to increase the security of your portal by asking users to immediately change their password, so the one that was transfered by e-mail is no longer valid and they then will use one that they came up with and that they are the only person to know."
+msgstr "To prosty sposób na zwiększenie bezpieczeństwa portalu, poprzez poproszenie użytkowników o natychmiastową zmianę hasła, tak aby to przesłane e-mailem przestało być ważne i aby używali własnego hasła, które tylko oni znają."
+
+msgid "Do not list campus"
+msgstr "Nie wyświetlaj kampusu"
+
+msgid "If enabled, the campus will not be displayed in the list, effectively hiding it from users."
+msgstr "Jeśli włączone, kampus nie będzie wyświetlany na liście, skutecznie ukrywając go przed użytkownikami."

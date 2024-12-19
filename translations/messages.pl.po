@@ -1713,10 +1713,10 @@ msgid "By default, your course is public. But you can define the level of access
 msgstr "Standardowo Twój kurs jest upubliczniony. Możesz zmienić poziom dostępności powyżej."
 
 msgid "Public - access allowed for the whole world"
-msgstr "Dostęp dla całego świata"
+msgstr "Publiczny - dostęp dla zarejestrowanych użytkowników"
 
 msgid " Open - access allowed for users registered on the platform"
-msgstr "Dostęp dla zarejestrowanych użytkowników platformy"
+msgstr "Otwarty - dostęp poprzez link"
 
 msgid "Student %s is no subscribed to this course"
 msgstr "Student %s nie jest zapisany na ten kurs"

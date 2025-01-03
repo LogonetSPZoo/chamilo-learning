@@ -103,7 +103,12 @@ if ($form->validate()) {
         header('Location: question_create.php?'.api_get_cidreq().'&error=true');
         exit;
     }
-    header('Location: admin.php?exerciseId='.$values['exercise'].'&newQuestion=yes&isContent='.$values['is_content'].'&answerType='.$answer_type);
+
+    if (!isset($values['is_content'])) {
+        $values['is_content'] = 0;
+    }
+
+    header('Location: admin.php?cid='.$_REQUEST['cid'].'&exerciseId='.$values['exercise'].'&newQuestion=yes&isContent='.$values['is_content'].'&answerType='.$answer_type);
     exit;
 } else {
     Display::display_header($nameTools);

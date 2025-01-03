@@ -335,12 +335,12 @@ if (isset($_GET['search']) && 'advanced' === $_GET['search']) {
 
     $form->addElement('radio', 'keyword_visibility', get_lang('CourseAccess'), get_lang('OpenToTheWorld'), COURSE_VISIBILITY_OPEN_WORLD);
     $form->addElement('radio', 'keyword_visibility', null, get_lang('OpenToThePlatform'), COURSE_VISIBILITY_OPEN_PLATFORM);
-    $form->addElement('radio', 'keyword_visibility', null, get_lang('Private'), COURSE_VISIBILITY_REGISTERED);
+    $form->addElement('radio', 'keyword_visibility', null, get_lang('Private access (access authorized to group members only)'), COURSE_VISIBILITY_REGISTERED);
     $form->addElement('radio', 'keyword_visibility', null, get_lang('CourseVisibilityClosed'), COURSE_VISIBILITY_CLOSED);
     $form->addElement('radio', 'keyword_visibility', null, get_lang('CourseVisibilityHidden'), COURSE_VISIBILITY_HIDDEN);
     $form->addElement('radio', 'keyword_visibility', null, get_lang('All'), '%');
     $form->addElement('radio', 'keyword_subscribe', get_lang('Subscription'), get_lang('Allowed'), 1);
-    $form->addElement('radio', 'keyword_subscribe', null, get_lang('Denied'), 0);
+    $form->addElement('radio', 'keyword_subscribe', null, get_lang('Only for teachers'), 0);
     $form->addElement('radio', 'keyword_subscribe', null, get_lang('All'), '%');
     $form->addElement('radio', 'keyword_unsubscribe', get_lang('Unsubscription'), get_lang('AllowedToUnsubscribe'), 1);
     $form->addElement('radio', 'keyword_unsubscribe', null, get_lang('NotAllowedToUnsubscribe'), 0);

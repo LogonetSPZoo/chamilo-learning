@@ -387,7 +387,7 @@ if ($count_fields > 0) {
     }
 }
 
-$content = '<p>'.get_lang('CSVMustLookLike').' ('.get_lang('MandatoryFields').') :</p>
+$content = '<p>'.get_lang('CSVMustLookLike').' ('.get_lang('MandatoryFields').'):</p>
     <blockquote>
     <pre>
         <b>UserName</b>;LastName;FirstName;Email;NewUserName;Password;AuthSource;OfficialCode;PhoneNumber;Status;ExpiryDate;Active;Language;Courses;ClassId;

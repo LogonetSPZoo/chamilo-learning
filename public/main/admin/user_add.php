@@ -296,14 +296,14 @@ $returnParams = $extraField->addElements(
     true
 );
 
-$form->addEmailTemplate(
-    [
-        'subject_registration_platform.tpl',
-        'content_registration_platform.tpl',
-        'new_user_first_email_confirmation.tpl',
-        'new_user_second_email_confirmation.tpl',
-    ]
-);
+//$form->addEmailTemplate(
+//    [
+//        'subject_registration_platform.tpl',
+//        'content_registration_platform.tpl',
+//        'new_user_first_email_confirmation.tpl',
+//        'new_user_second_email_confirmation.tpl',
+//    ]
+//);
 
 $jquery_ready_content = $returnParams['jquery_ready_content'];
 
@@ -330,8 +330,8 @@ $defaults['locale'] = api_get_language_isocode();
 $form->setDefaults($defaults);
 
 // Submit button
-$html_results_enabled[] = $form->createElement('button', 'submit', get_lang('Add'), 'plus', 'primary');
-$html_results_enabled[] = $form->createElement('button', 'submit_plus', get_lang('Add').'+', 'plus', 'primary');
+$html_results_enabled[] = $form->createElement('button', 'submit', get_lang('Register'), 'plus', 'primary');
+$html_results_enabled[] = $form->createElement('button', 'submit_plus', get_lang('Register and add new'), 'plus', 'primary');
 $form->addGroup($html_results_enabled);
 
 // Validate form
